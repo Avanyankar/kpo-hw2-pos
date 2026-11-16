@@ -1,0 +1,22 @@
+student add s1 "Анна Иванова"
+student add s2 "Иван Петров"
+student list
+criterion add homework "Домашние задания" 10 40
+criterion add exam "Экзамен" 20 60
+criterion list
+evaluation set s1 homework 8 "Хорошее решение"
+evaluation set s1 exam 15
+evaluation set s2 homework 10
+evaluation list s1
+total s1
+total s2 preliminary
+report
+evaluation change s1 exam 18 "После проверки"
+total s1
+evaluation remove s1 exam
+total s1 preliminary
+evaluation set s1 exam 15
+evaluation set s2 exam 20
+report
+export "results.csv"
+exit
